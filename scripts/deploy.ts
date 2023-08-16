@@ -15,7 +15,7 @@ async function main() {
   logger.increaseLogIndent();
   logger.log("👉 The deployer (owner) address:", deployer.address);
 
-  logger.log(`🏁 Deploying the token contract '${contractName}' using the proxy...`);
+  logger.log(`🏁 Deploying contract '${contractName}'...`);
   const contractFactory: ContractFactory = await ethers.getContractFactory(contractName);
   const contract: Contract = await contractFactory.deploy();
   await contract.deployed();
